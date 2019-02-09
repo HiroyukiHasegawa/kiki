@@ -21,12 +21,36 @@ window.onload = function() {
 	//Icon
 	map.addIcon(35.943560,136.188917,"JR鯖江駅")
 	map.addIcon(35.944571,136.186228, "Hana道場")
-        //map.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
+        
+	ap.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
+		// SPARQLクエリー
+	var query = `
+		prefix ic: <http://imi.go.jp/ns/core/rdf#>
+		prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+		select ?uri ?name ?lat ?lng {
+			?uri ic:名称 [ ic:表記 ?name ].
+			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
+			filter(contains(str(?name),'鯖江'))
+		} limit 100
+	`
+	querySPARQL(query, function(data) {
+		var items = data.results.bindings;
+		for (var i = 0; i < items.length; i++) {
+			var item = items[i];
+			var lat = item.lat.value;
+			var lng = item.lng.value;
+			var name = item.name.value;
+			map.addIcon(lat, lng, name)
+		}
+	});
+	
+	
 }
+	/*
 	//</script>
 	//<script>
-		
-        var query = `
+	/*	
+        var query = 
 	prefix ic: <http://imi.go.jp/ns/core/rdf#>
 	prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 	
@@ -34,8 +58,7 @@ window.onload = function() {
 		?uri ic:名称 [ ic:表記 ?name ].
 	        ?uri ic:地理座標　[ ic:緯度 ?lat; ic:軽度 ?lng; ].
 	        filter(contains(str(?name),'鯖江'))	       
-	} limit 100
-`
+
 querySPARQL(query, function(data) {
 	var items = data.results.bindings;
 	for (var i = 0; i < items.length; i++) {
@@ -47,6 +70,7 @@ querySPARQL(query, function(data) {
 	}
 
 });
+	*/
 	
 </script>
 	
