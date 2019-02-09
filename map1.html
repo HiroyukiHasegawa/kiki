@@ -43,7 +43,7 @@ querySPARQL(query, function(data) {
 	for (var i = 0; i < items.length; i++) {
 		var item = items[i];
 	        var lat = item.lat.value;
-	        var lng = item.lat.value;
+	        var lng = item.lng.value;
 	        var name = item.name.value;
 	        map.addIcon(lat, lng, name)
 	}
