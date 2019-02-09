@@ -23,8 +23,7 @@ window.onload = function() {
 	map.addIcon(35.944571,136.186228, "Hana道場")
         //map.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
 }
-</script>
-	var query = `
+        var query = `
         prefix ic: <http://imi.go.jp/ns/core/rdf#>
 	prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 	
@@ -34,12 +33,6 @@ window.onload = function() {
 	        filter(contains(str(?name),'鯖江'))	       
 	} limit 100
 `
-	
-
-	
-	
-
-<script>"use strict"
 querySPARQL(query, function(data) {
 	var items = data.results.bindings;
 	for (var i = 0; i < items.length; i++) {
