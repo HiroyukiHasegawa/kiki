@@ -31,7 +31,7 @@ var query = '
 	        filter(contains(str(?name),'鯖江'))
 		       
 	} limit 100
-
+'
 querySPARQL (query, function(data) {
 	var items = data.results.bindings;
 	for (var i = 0,i < items.length; i++) {
