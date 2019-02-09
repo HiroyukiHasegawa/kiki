@@ -12,7 +12,7 @@
 <script src="https://code4fukui.github.io/egmapjs/sparql.js"></script>
 <script>"use strict"
 
-
+</script>
 	
 window.onload = function() {
 	var map = initMap('mapid')
@@ -22,6 +22,8 @@ window.onload = function() {
 	map.addIcon(35.943560,136.188917,"JR鯖江駅")
 	map.addIcon(35.944571,136.186228, "Hana道場")
         //map.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
+
+
 
 	var query = `
         prefix ic: <http://imi.go.jp/ns/core/rdf#>
@@ -45,8 +47,9 @@ querySPARQL(query, function(data) {
 	        map.addIcon(lat, lng, name)
 	}
 });
-
-</script>
+	
+	
+></script>
 <style>
 
 body { margin: 0; font-family: sans-serif; text-align: center; }
