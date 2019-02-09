@@ -17,7 +17,7 @@ window.onload = function() {
 	map.setZoom(16)
 	map.panTo([ 35.943560,136.188917 ]) // 鯖江駅
 	//Icon
-	//map.addIcon(35.943560,136.188917,"JR鯖江駅")
+	map.addIcon(35.943560,136.188917,"JR鯖江駅")
 	ap.addIcon(35.944571,136.186228, "Hana道場")
         
 	//ap.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
@@ -28,7 +28,7 @@ window.onload = function() {
 		select ?uri ?name ?lat ?lng {
 			?uri ic:名称 [ ic:表記 ?name ].
 			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
-			filter(contains(str(?name),'鯖江'))
+			filter(contains(str(?name),'公園'))
 		} limit 100
 	`
 	querySPARQL(query, function(data) {
