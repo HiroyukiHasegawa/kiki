@@ -17,12 +17,8 @@
 <link rel="stylesheet" href="https://code4fukui.github.io/egmapjs/egmap.css"/>
 <script src="https://fukuno.jig.jp/fukuno.js"></script>
 <script src="https://code4fukui.github.io/egmapjs/sparql.js"></script>
-`	
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-`	
+	
+
 <script>"use strict"
 
 
@@ -36,27 +32,8 @@ window.onload = function() {
 	//map.addIcon(35.944571,136.186228, "Hana道場")
         
 	//map.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
-	`
-	var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 64, 64)
-	navigator.geolocation.watchPosition(function(gpos) {
-		const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
-		current.setLatLng(pos)
-		map.panTo(pos)
-	}, function() {
-		alert("現在位置に取得に失敗！")
-	})
-	`
-`var x = gpos.coords.latitude;
-	var y = gpos.coords.longitude;
-`
-	`
-	L.Routing.control({	
-  		waypoints: [	
-			L.latLng(35.00,136.00),
-    			L.latLng(35.943560,136.188917)
-  		]
-	}).addTo(map);
-		`	
+
+
 	// SPARQLクエリー
 	var query = `
 		prefix ic: <http://imi.go.jp/ns/core/rdf#>
@@ -77,40 +54,20 @@ window.onload = function() {
 			//map.addIcon(lat, lng, name,"icon-battery.png""Icon-batteryMoveBlue.gif",64,64)
 			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64,64)
 		}
-		
-	});	
-	
-	
+	});
 }
 
 
 	
 </script>
 	
-<script>"use strict"
-`
-function sample(){
-  			document.getElementById("area1").innerText = "変更";
-		}
-`
-</script>	
+	
 	
 	
 <style>
 
-	`
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>Sample</title>
-  <script src="sample.js"></script>
-</head>
-<body>
-  <input type="button" value="ボタン" onclick="sample();">
-  <div id="area1">変更前</div>
-</body>
-</html>
-	`
+	
+
 	
 	
 body { margin: 0; font-family: sans-serif; text-align: center; }
