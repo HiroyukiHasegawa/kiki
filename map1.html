@@ -75,12 +75,12 @@ window.onload = function() {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",32,32);
 			}
 		        else if (iNum  < 9) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",26,26);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",16,16);
 			}
 			iNum++;
 			if (iNum == 10){iNum = 0};
 		}
-		var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 10, 10)
+		var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 16, 16)
 	        navigator.geolocation.watchPosition(function(gpos) {
 		const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
 		current.setLatLng(pos)
