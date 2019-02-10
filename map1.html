@@ -57,14 +57,18 @@ window.onload = function() {
 			//map.addIcon(lat, lng, name,"icon-battery.png""Icon-batteryMoveBlue.gif",64,64)
 			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64,64)
 		}
-	});	
-	
-	L.Routing.control({
+		
+		L.Routing.control({
   			waypoints: [	//pos L.latLng(57.74, 11.94),L.latLng(57.6792, 11.949)
     				L.latLng(pos,
     				L.latLng(35.943560,136.188917)
   				]
 			}).addTo(map);
+		
+		
+	});	
+	
+	
 }
 
 
