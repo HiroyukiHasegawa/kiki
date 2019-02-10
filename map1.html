@@ -80,7 +80,7 @@ window.onload = function() {
 			iNum++;
 			if (iNum == 10){iNum = 0};
 		}
-		var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 26, 26)
+		var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 16, 16)
 	        navigator.geolocation.watchPosition(function(gpos) {
 		const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
 		current.setLatLng(pos)
