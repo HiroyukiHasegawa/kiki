@@ -51,10 +51,10 @@ window.onload = function() {
 			var lng = item.lng.value;
 			var name = item.name.value;
 			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64);
-			if (i === 3) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",128,128);
+			if (i < 5) {
+				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",128,128);
 			}
-		        else if (i === 4) {
+		        else if (i < 6) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",64,64);
 			}
 			iNum++;
