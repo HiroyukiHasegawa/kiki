@@ -67,21 +67,21 @@ window.onload = function() {
 			var name = item.name.value;
 			`
 			dis = dalcDitande(ll.lat, ll.lng, e.latlng, e.latlng.lng);
-			`
+			
 			if (dis < iDisMemo_d ) {
 				iDisMemo_d = dis;
 				iDisMemo_i = i;
 				iDisMemo_x = item.lat.value;
 				iDisMemo_y = item.lng.value;
 			}
-			
+			'
 			
 			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64,64);
 			if (iNum  < 8) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",48,48);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",32,32);
 			}
 		        else if (iNum  < 9) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",32,32);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",16,16);
 			}
 			iNum++;
 			if (iNum == 10){iNum = 0};
