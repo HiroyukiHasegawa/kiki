@@ -37,12 +37,12 @@ window.onload = function() {
 		alert("現在位置に取得に失敗！")
 	})
 	
-	x = gpos.coords.latitude;
-	y = gpos.coords.longitude;
+	var x = gpos.coords.latitude;
+	var y = gpos.coords.longitude;
 	
 	L.Routing.control({	
   		waypoints: [	
-			L.latLng((35,136),
+			L.latLng((x,y),
     			L.latLng(35.943560,136.188917)
   		]
 	}).addTo(map);
