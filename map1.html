@@ -66,14 +66,14 @@ window.onload = function() {
 			var lat = item.lat.value;
 			var lng = item.lng.value;
 			var name = item.name.value;
-			
-			if (0 < iNum  < 3) {
+			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",48,48);
+			if (iNum  = 3) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",48,48);
 			}
-			if (2 < iNum  < 5) {
+			if (iNum  = 5) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",32,32);
 			}
-		        else if (4 < iNum  < 9) {
+		        else if (iNum  = 6) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",24,24);
 			}
 			iNum++;
