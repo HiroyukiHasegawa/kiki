@@ -36,6 +36,9 @@ window.onload = function() {
 	}, function() {
 		alert("現在位置に取得に失敗！")
 	})
+	
+	x = gpos.coords.latitude;
+	y = gpos.coords.longitude;
 	//ルート検索
 	//pos L.latLng(57.74, 11.94),L.latLng(57.6792, 11.949)
 	//L.latLng((pos.latitude, pos.longitude),
