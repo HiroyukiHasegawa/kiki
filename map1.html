@@ -68,16 +68,19 @@ window.onload = function() {
 		const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
 		current.setLatLng(pos)
 		map.panTo(pos)
+			
+			L.Routing.control({	
+  			waypoints: [	
+			L.latLng(gpos.coords.latitude, gpos.coords.longitude),
+    			L.latLng(35.0,136.0)
+  		]
+		}).addTo(map);
+			
 	}, function() {
 		alert("現在位置に取得に失敗！")
 	})
 		
-	L.Routing.control({	
-  		waypoints: [	
-			L.latLng(gpos.coords.latitude, gpos.coords.longitude),
-    			L.latLng(35.0,136.0)
-  		]
-	}).addTo(map);
+
 		
 	});
 }
