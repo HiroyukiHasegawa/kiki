@@ -68,13 +68,13 @@ window.onload = function() {
 			var name = item.name.value;
 			
 			if (0 < iNum  < 3) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",32,32);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",48,48);
 			}
 			if (2 < iNum  < 5) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",24,24);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",32,32);
 			}
 		        else if (4 < iNum  < 9) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",16,16);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",24,24);
 			}
 			iNum++;
 			if (iNum == 10){iNum = 0};
