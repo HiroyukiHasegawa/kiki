@@ -52,12 +52,12 @@ window.onload = function() {
 			var lat = item.lat.value;
 			var lng = item.lng.value;
 			var name = item.name.value;
-			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64);
+			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",128,128);
 			if (iNum  < 8) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",64,64);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",96,196);
 			}
 		        else if (iNum  < 9) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",128,128);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",64,64);
 			}
 			iNum++;
 			if (iNum == 10){iNum = 0};
