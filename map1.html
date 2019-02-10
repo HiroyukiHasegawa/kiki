@@ -36,7 +36,7 @@ window.onload = function() {
 	//map.addIcon(35.944571,136.186228, "Hana道場")
         
 	//map.addIcon(35.944571,136.186228, "Hana道場", "icon-hanadojo.png",64)	
-	
+	`
 	var current = map.addIcon(0, 0, "現在地", "icon-walking.png", 64, 64)
 	navigator.geolocation.watchPosition(function(gpos) {
 		const pos = [ gpos.coords.latitude, gpos.coords.longitude ]
@@ -45,7 +45,7 @@ window.onload = function() {
 	}, function() {
 		alert("現在位置に取得に失敗！")
 	})
-	
+	`
 `var x = gpos.coords.latitude;
 	var y = gpos.coords.longitude;
 `
