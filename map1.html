@@ -37,11 +37,13 @@ window.onload = function() {
 		alert("現在位置に取得に失敗！")
 	})
 	//ルート検索
+	//pos L.latLng(57.74, 11.94),L.latLng(57.6792, 11.949)
+	//L.latLng((pos.latitude, pos.longitude),
 			L.Routing.control({
-  			waypoints: [	//pos L.latLng(57.74, 11.94),L.latLng(57.6792, 11.949)
-    				//L.latLng((pos.latitude, pos.longitude),
-				L.latLng((35.0,136.0),
-    				L.latLng(35.943560,136.188917)
+				
+  			waypoints: [	
+					L.latLng((35.0,136.0),
+    					L.latLng(35.943560,136.188917)
   				]
 			}).addTo(map);
 	
