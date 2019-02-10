@@ -64,7 +64,7 @@ window.onload = function() {
 		select ?uri ?name ?lat ?lng {
 			?uri ic:名称 [ ic:表記 ?name ].
 			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
-			filter(contains(str(?name),'学校'))
+			filter(contains(str(?name),'充電'))
 		} limit 100
 	`
 	querySPARQL(query, function(data) {
@@ -89,14 +89,17 @@ window.onload = function() {
 </script>
 	
 <script>"use strict"
+`
 function sample(){
   			document.getElementById("area1").innerText = "変更";
 		}
+`
 </script>	
 	
 	
 <style>
 
+	`
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -108,7 +111,7 @@ function sample(){
   <div id="area1">変更前</div>
 </body>
 </html>
-	
+	`
 	
 	
 body { margin: 0; font-family: sans-serif; text-align: center; }
