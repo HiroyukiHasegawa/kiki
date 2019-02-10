@@ -42,7 +42,7 @@ window.onload = function() {
 	
 	L.Routing.control({	
   		waypoints: [	
-			L.latLng((x,y),
+			L.latLng((current.setLatLng(pos)),
     			L.latLng(35.943560,136.188917)
   		]
 	}).addTo(map);
