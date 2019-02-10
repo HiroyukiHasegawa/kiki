@@ -2,7 +2,11 @@
 
 <title>マップアプリ1</title>
 
-
+//ルート検索
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 	
 	
 <link rel="apple-touch-icon" href="app-icon.png"/>
@@ -54,6 +58,13 @@ window.onload = function() {
 			map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",64,64)
 		}
 	});	
+	
+	L.Routing.control({
+  			waypoints: [	//pos L.latLng(57.74, 11.94),L.latLng(57.6792, 11.949)
+    				L.latLng(pos,
+    				L.latLng(35.943560,136.188917)
+  				]
+			}).addTo(map);
 }
 
 
