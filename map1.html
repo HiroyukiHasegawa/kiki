@@ -67,7 +67,7 @@ window.onload = function() {
 			var lng = item.lng.value;
 			var name = item.name.value;
 			if (iNum  < 6) {
-				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",48,48);
+				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",48,48);
 			}
 			if (iNum  = 7) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveBlue.gif",32,32);
@@ -75,9 +75,7 @@ window.onload = function() {
 			if (iNum  = 8) {
 				map.addIcon(lat, lng, name,"Icon-batteryMoveYellow.gif",32,32);
 			}
-		        if (iNum = 9 
-				map.addIcon(lat, lng, name,"Icon-batteryMoveRed.gif",24,24);
-			}
+		     
 			iNum++;
 			if (iNum == 10){iNum = 0};
 		}
