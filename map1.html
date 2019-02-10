@@ -15,7 +15,9 @@
 <script src="https://fukuno.jig.jp/fukuno.js"></script>
 <script src="https://code4fukui.github.io/egmapjs/sparql.js"></script>
 	
-		
+	
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>	
 
 <script>"use strict"
 
@@ -69,7 +71,14 @@ window.onload = function() {
 	}, function() {
 		alert("現在位置に取得に失敗！")
 	})
-			
+		
+	L.Routing.control({	
+  		waypoints: [	
+			L.latLng(gpos.coords.latitude, gpos.coords.longitude),
+    			L.latLng(35.943560,136.188917)
+  		]
+	}).addTo(map);
+		
 	});
 }
 
